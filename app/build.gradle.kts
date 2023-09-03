@@ -86,7 +86,7 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.1")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.1")
 
-    kapt ("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.7.0")
+//    kapt ("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.7.0")
 
 }
 kapt {

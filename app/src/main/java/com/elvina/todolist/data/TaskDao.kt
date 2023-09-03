@@ -24,14 +24,14 @@ interface TaskDao {
     fun getTasksSortedByDateCreated(searchQuery: String, hideCompleted: Boolean): Flow<List<Task>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(task: Task)
+    suspend fun insert(task: Task): Int
 
     @Update
-    suspend fun update(task: Task)
+    suspend fun update(task: Task): Int
 
     @Delete
-    suspend fun delete(task: Task)
+    suspend fun delete(task: Task): Int
 
     @Query("DELETE FROM task_table WHERE completed = 1")
-    suspend fun deleteCompletedTasks()
+    suspend fun deleteCompletedTasks(): Int
 }
